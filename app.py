@@ -154,7 +154,6 @@ def select_item():
         return render_template("input.html")
 
 
-
 @app.route("/back")
 def back():
     return render_template("input.html")
