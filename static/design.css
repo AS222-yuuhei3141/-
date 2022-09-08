@@ -62,3 +62,8 @@ header nav ul li a:hover {
   width: 45%;
   height: 45%;
 }
+
+/* output.htmlに適用 */
+.placement {
+  text-align: center;
+}
