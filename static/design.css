@@ -64,7 +64,6 @@ header nav ul li a:hover {
 }
 
 /* input.htmlのnavibarについてのcss */
-
 h1{
   text-align: center;
 }
@@ -75,7 +74,7 @@ h1{
 
 .relative{
   position:relative;
-  left: 1180px;
+  left: 1150px;
 }
 .home{
   position:relative;
