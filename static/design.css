@@ -63,11 +63,6 @@ header nav ul li a:hover {
   height: 45%;
 }
 
-/* output.htmlに適用 */
-.placement {
-  text-align: center;
-}
-
 /* input.htmlのnavibarについてのcss */
 h1{
   text-align: center;

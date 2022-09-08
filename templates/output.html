@@ -12,7 +12,6 @@
         <h1>冷凍食品提案画面</h1>
         {% if data|length != 0 %}
         <h2>オススメの冷凍食品</h2>
-        <div class="placement">
             <table>
                 <thead>
                     <th>画像</th>
@@ -27,7 +26,7 @@
                 <tbody>
                     {% for dict in data %}
                     <tr>
-                        <td> <a href="{{ dict['url']}}" alt="{{ dict['食品名']}}"><img src="{{dict['画像']}}" width="30px"></a></td>
+                        <td> <a href="{{ dict['url']}}" alt="{{ dict['食品名']}}"><img src="{{dict['画像']}}" width="300px"></a></td>
                         <td> {{ dict["食品名"]}}</td>
                         <td> {{ dict["カロリー"]}}</td>
                         <td> {{ dict["タンパク質"]}}</td>
@@ -38,7 +37,6 @@
                     {% endfor %}
                 </tbody>
             </table>
-        </div>
             {% else %}
             <h1>今日は断食！おめぇが食う飯はねぇ！</h1>
         {% endif %}
