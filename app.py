@@ -107,7 +107,7 @@ def index():
 
         return render_template("output.html", data = data)
 
-    
+
 @app.route("/back")
 def back():
     return render_template("input.html")

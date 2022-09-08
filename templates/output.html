@@ -20,6 +20,7 @@
         <!-- 表形式で栄養成分や名前を表示する -->
         <table>
             <thead>
+                    <th>画像</th>
                     <th>食品名</th>
                     <th>カロリー</th>
                     <th>炭水化物</th>
@@ -31,6 +32,7 @@
             <tbody>
                 {% for dict in data %}
                 <tr>
+                    <td> <img src = "{{ dict['画像']}}"></td>
                     <td> {{ dict["食品名"]}}</td>
                     <td> {{ dict["カロリー"]}}</td>
                     <td> {{ dict["タンパク質"]}}</td>
