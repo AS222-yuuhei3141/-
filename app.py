@@ -2,6 +2,7 @@ from crypt import methods
 from flask import Flask, render_template, request
 from cs50 import SQL
 import random
+import ast
 
 app = Flask("__name__")
 db = SQL("sqlite:///foodname.db")
@@ -27,11 +28,6 @@ def index():
         # 目的
         activity = request.form.get("activity")
 
-
-    #とりあえず、仮で決める。
-        # 朝で摂取したエネルギー + 昼で摂取したエネルギー
-        # 男性:1800 (kcal)
-        # 女性:1350 (kcal)
 
 # --------------------------------------------------------------------
 # 一人当たりの必要摂取カロリー
@@ -90,20 +86,33 @@ def index():
 # D = act - (朝で摂取したエネルギー + 昼で摂取したエネルギー) [kcal]
 # --------------------------------------------------------------------
 
-    #とりあえず、仮で決める。
-    # 朝で摂取したエネルギー + 昼で摂取したエネルギー
-        # 男性:1800 (kcal)
-        # 女性:1350 (kcal)
-        total = 0
+        total_energy = 0
+        total_protein = 0
+        total_lipid = 0
+        total_carbohydrate = 0
         fDicts = request.form.getlist("select_food")
         for fDict in fDicts:
-            total += int(fDict)
+            Dict = ast.literal_eval(fDict)
+            total_energy += int(Dict['エネルギー'])
+            total_protein += int(Dict['たんぱく質'])
+            total_lipid += int(Dict['脂質'])
+            total_carbohydrate += int(Dict['炭水化物'])
+
+        # 1日に必要な三大栄養素
+        P = 2 * intWeight
+        F = act * 0.25
+        CBH = act - P - F
+
+        # 夜に必要な三大栄養素
+        difP = P - total_protein
+        difF = F - total_lipid
+        difCBH = CBH - total_carbohydrate
 
         if (sex == "男"):
-            D = act - total
+            D = act - total_energy
 
         elif (sex == "女"):
-            D = act - total
+            D = act - total_energy
 
 # --------------------------------------------------------------------
 
