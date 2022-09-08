@@ -1,3 +1,4 @@
+from crypt import methods
 from flask import Flask, render_template, request
 from cs50 import SQL
 import random
@@ -93,12 +94,16 @@ def index():
     # 朝で摂取したエネルギー + 昼で摂取したエネルギー
         # 男性:1800 (kcal)
         # 女性:1350 (kcal)
-        D = 0
+        total = 0
+        fDicts = request.form.getlist("select_food")
+        for fDict in fDicts:
+            total += int(fDict)
+
         if (sex == "男"):
-            D = act - 1800
+            D = act - total
 
         elif (sex == "女"):
-            D = act - 1350
+            D = act - total
 
 # --------------------------------------------------------------------
 
@@ -107,7 +112,40 @@ def index():
 
         return render_template("output.html", data = data)
 
-    
+
+@app.route("/search_item", methods=["GET", "POST"])
+def search_item():
+    if request.method == "POST":
+        breakfast = request.form.get("breakfast")
+        lunch = request.form.get("lunch")
+        snack = request.form.get("snack")
+        sql = "SELECT * FROM 食品成分 WHERE 食品名 like ?"
+        if len(breakfast) != 0:
+            brName = db.execute(sql, "%" + breakfast + "%")
+        else:
+            brName = ''
+        if len(lunch) != 0:
+            luName = db.execute(sql, "%" + lunch + "%")
+        else:
+            luName = ''
+        if len(snack) != 0:
+            snName = db.execute(sql, "%" + snack + "%")
+        else:
+            snName = ''
+        return render_template("input.html", breakfast=brName, lunch=luName, snack=snName)
+
+
+@app.route("/select_item", methods=["GET", "POST"])
+def select_item():
+    if request.method == "POST":
+        total = 0
+        fDicts = request.form.getlist("select_food")
+        for fDict in fDicts:
+            total += fDict['エネルギー']
+        return render_template("input.html")
+
+
+
 @app.route("/back")
 def back():
     return render_template("input.html")
