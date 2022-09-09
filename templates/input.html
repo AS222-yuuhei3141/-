@@ -34,17 +34,50 @@
         </div>
     </nav>
 
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript">
-        // 要素をコピー＆追加する関数
-        function addExample() {
-            let elements = document.getElementById("breakfast");
-            let copied = elements.cloneNode(true);
-            addChild(copied);
-        }
+    $(function() {
 
-        // ボタンにイベントハンドラをセット
-        const btn = document.getElementById("add");
-        btn.addEventListener("click", addExample, false);
+        // button
+        const add1 = $('#add1');
+        const add2 = $('#add2');
+        const add3 = $('#add3');
+
+        // clone
+        add1.click(function() {
+
+            var text = $('#breakfast').last();  // 最後尾にあるinput
+
+            text
+                .clone()  // クローン
+                .val('')  // valueもクローンされるので削除する
+                .insertAfter(text);  // inputを最後尾に追加
+
+        });
+
+        add2.click(function() {
+
+        var text = $('#lunch').last();  // 最後尾にあるinput
+
+        text
+            .clone()  // クローン
+            .val('')  // valueもクローンされるので削除する
+            .insertAfter(text);  // inputを最後尾に追加
+
+        });
+
+        add3.click(function() {
+
+        var text = $('#snack').last();  // 最後尾にあるinput
+
+        text
+            .clone()  // クローン
+            .val('')  // valueもクローンされるので削除する
+            .insertAfter(text);  // inputを最後尾に追加
+
+        });
+
+    });
 
     </script>
     <h1>必須情報の入力する画面</h1>
@@ -54,9 +87,9 @@
                 <h2>一人当たりの必要摂取カロリー</h2>
             </div>
             <form action="/search_item" method="POST">
-                朝食<input type="text" name="breakfast" id="breakfast"><br>
-                昼食<input type="text" name="lunch" id="lunch"><br>
-                間食<input type="text" name="snack" id="snack"><br>
+                朝食<input type="text" name="breakfast" id="breakfast"><button type="button" id="add1">+</button><br>
+                昼食<input type="text" name="lunch" id="lunch"><button type="button" id="add2">+</button><br>
+                間食<input type="text" name="snack" id="snack"><button type="button" id="add3">+</button><br>
                 <input type="submit" value="検索">
             </form><br>
             <div class="space">

@@ -125,22 +125,22 @@ def index():
 @app.route("/search_item", methods=["GET", "POST"])
 def search_item():
     if request.method == "POST":
-        breakfast = request.form.get("breakfast")
-        lunch = request.form.get("lunch")
-        snack = request.form.get("snack")
+        breakfasts = request.form.getlist("breakfast")
+        lunchs = request.form.getlist("lunch")
+        snacks = request.form.getlist("snack")
         sql = "SELECT * FROM 食品成分 WHERE 食品名 like ?"
-        if len(breakfast) != 0:
-            brName = db.execute(sql, "%" + breakfast + "%")
-        else:
-            brName = ''
-        if len(lunch) != 0:
-            luName = db.execute(sql, "%" + lunch + "%")
-        else:
-            luName = ''
-        if len(snack) != 0:
-            snName = db.execute(sql, "%" + snack + "%")
-        else:
-            snName = ''
+        brName = []
+        luName = []
+        snName = []
+        for breakfast in breakfasts:
+            if len(breakfast) != 0:
+                brName += db.execute(sql, "%" + breakfast + "%")
+        for lunch in lunchs:
+            if len(lunch) != 0:
+                luName += db.execute(sql, "%" + lunch + "%")
+        for snack in snacks:
+            if len(snack) != 0:
+                snName += db.execute(sql, "%" + snack + "%")
         return render_template("input.html", breakfast=brName, lunch=luName, snack=snName)
 
 
