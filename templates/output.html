@@ -12,6 +12,7 @@
         <h1>冷凍食品提案画面</h1>
         {% if data|length != 0 %}
         <h2>オススメの冷凍食品</h2>
+        <div class="fooddata">
             <table>
                 <thead>
                     <th>画像</th>
@@ -37,6 +38,7 @@
                     {% endfor %}
                 </tbody>
             </table>
+        </div>
             {% else %}
             <h1>今日は断食！おめぇが食う飯はねぇ！</h1>
         {% endif %}

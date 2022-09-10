@@ -15,7 +15,8 @@ body {
 }
 /* ここまで */
 
-/* home.htmlのheaderについて*/
+/* home.htmlについてのcss*/
+
 a,
 a:link {
   color: #3585b7;
@@ -84,4 +85,11 @@ h1{
 /* input.htmlのinput, form間の空白についてのcss */
 .space{
   margin:10px;
+}
+
+/* output.htmlについてのcss */
+
+.fooddata{
+  position:relative;
+  left: 300px;
 }
