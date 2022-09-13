@@ -167,7 +167,6 @@ main {
 	border-top-left-radius: 10px;
     font-weight: bolder;
     border-bottom: 1px solid black;
-    position: relative;
 }
 
 .tabs li a {
@@ -179,10 +178,20 @@ main {
 	/* タブのボタンの上部分を丸っぽくする */
 	border-top-right-radius: 10px;
 	border-top-left-radius: 10px;
+    position: relative;
 }
 
 .tabs li a::after {
-    
+    position: absolute;
+    left: 0;
+    content: '';
+    background: black;
+    transform: scale(0, 1);
+    transform-origin: center top; /*変形（アンダーラインの伸長）の原点がaタグ（各メニュー）の右端*/
+    transition: transform 0.3s;   /*変形の時間*/
+    width: 100%;
+    height: 1.5px;
+    bottom: -4px;
 }
 
 
