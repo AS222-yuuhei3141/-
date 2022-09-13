@@ -26,9 +26,9 @@ body {
   overflow: hidden;
 }
 
-/* body {
+body {
   background-color: white;
-} */
+}
 
 .likeButton {
   cursor: pointer;
