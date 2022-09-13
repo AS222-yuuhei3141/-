@@ -166,7 +166,6 @@ main {
     border-top-right-radius: 10px;
 	border-top-left-radius: 10px;
     font-weight: bolder;
-    border-bottom: 1px solid black;
 }
 
 .tabs li a {
@@ -194,6 +193,9 @@ main {
     bottom: -4px;
 }
 
+.tabs li a:hover::after {
+    transform: scale(1, 1); /*ホバー後、x軸方向に1（相対値）伸長*/
+}
 
 /* activeじゃないタブにhoverした時 */
 .tabs li a:not(.active):hover {
