@@ -229,7 +229,6 @@ ul {
 }
 
 .food-container:hover {
-	/* background-color: lightgreen; */
 	margin: 10px;
 	border-radius: 20px;
 	transform: scale(1.05, 1.05);
