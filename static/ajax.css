@@ -193,7 +193,7 @@ main {
 }
 
 .tabs li a:hover::after {
-    transform: scale(1, 1); /*ホバー後、x軸方向に1（相対値）伸長*/
+    transform: scale(0.74, 1); /*ホバー後、x軸方向に1（相対値）伸長*/
 }
 
 .tabs li {
