@@ -179,7 +179,7 @@ main {
     position: relative;
 }
 
-.tabs li a::after {
+.tabs li a span::after {
     position: absolute;
     left: 0;
     content: '';
@@ -192,7 +192,7 @@ main {
     bottom: -4px;
 }
 
-.tabs li a:hover::after {
+.tabs li a span:hover::after {
     transform: scale(1, 1); /*ホバー後、x軸方向に1（相対値）伸長*/
 }
 
