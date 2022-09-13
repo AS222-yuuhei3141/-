@@ -1,5 +1,8 @@
 @charset "utf-8";
-
+/* 背景画像についてのcss */
+.body {
+    background-image: url(https://st3.depositphotos.com/1558912/19009/i/950/depositphotos_190093122-stock-photo-italian-food-background-pasta-herbs.jpg);
+}
 .header {
     background: white;
 }
