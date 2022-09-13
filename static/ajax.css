@@ -244,7 +244,6 @@ ul {
 }
 
 .foodname {
-	/* background-color: coral; */
 	margin: 10px;
 	text-align: center;
 }
@@ -289,3 +288,6 @@ button:hover {
 button:hover::before {
     right: 0;
 }
+
+/* ハートのイイねについてのcss */
+
