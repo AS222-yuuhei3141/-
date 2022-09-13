@@ -2,7 +2,7 @@
 .header {
     background: white;
 }
-/* 疑問1 headerとcontainerを何故分けるのか */
+
 .header .container {
     height: 80px;
     display: flex;
