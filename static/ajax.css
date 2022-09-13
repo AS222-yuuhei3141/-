@@ -167,7 +167,7 @@ main {
 	border-top-left-radius: 10px;
     font-weight: bolder;
     border-bottom: 1px solid black;
-    /* position: relative; */
+    position: relative;
 }
 
 .tabs li a {
@@ -179,9 +179,12 @@ main {
 	/* タブのボタンの上部分を丸っぽくする */
 	border-top-right-radius: 10px;
 	border-top-left-radius: 10px;
-	/* ふわっと変化させる */
-	/* transition: 0.3px; */
 }
+
+.tabs li a::after {
+    
+}
+
 
 /* activeじゃないタブにhoverした時 */
 .tabs li a:not(.active):hover {
