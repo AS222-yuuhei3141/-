@@ -1,0 +1,234 @@
+@charset "utf-8";
+@import url(https://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+body {
+  padding: 80px;
+  background: #ccc;
+  height: 100vh;
+}
+img {
+  vertical-align: bottom;
+}
+
+
+.container {
+  max-width: 1200px;
+  padding: 0 40px;
+  margin: 0 auto;
+}
+header + header {
+  margin-top: 50px;
+}
+
+
+/* ヘッダー_A */
+.header_a {
+  color: #fff;
+  background: #000;
+}
+.header_a > .container {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  max-width: none;
+}
+
+/* ロゴ */
+.area_logo_header .logo {
+  display: block;
+}
+.area_logo_header .logo img {
+  height: 25px;
+  vertical-align: bottom;
+}
+
+
+/* ナビゲーション */
+.area_nav_header {
+  margin-left: auto;
+}
+
+/* リストナビ */
+.list_nav_header {
+  display: flex;
+  align-items: center;
+}
+.list_nav_header > li + li {
+  margin-left: 40px
+}
+.list_nav_header a {
+  color: #fff;
+  font: 500 15px/1em 'noto sans japanese',sans-serif;
+}
+.list_nav_header .btn_contact {
+  color: #000;
+  display: flex;
+  align-items: center;
+  height: 36px;
+  padding: 0 24px 0 48px;
+  background: #0cf;
+  border-radius: 2px;
+  position: relative;
+}
+.list_nav_header .btn_contact:before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: url(../img/ico/ico_mail_black.svg) no-repeat center center ;
+  background-size: contain;
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translate(0,-50%);
+}
+
+
+/* ヘッダー_b */
+.header_b {
+  background: #fff;
+}
+.header_b > .container {
+  height: 90px;
+  display: flex;
+  align-items: center;
+  max-width: none;
+}
+
+/* ロゴエリア_b */
+.area_logo_header_b .logo {
+  display: block;
+}
+.area_logo_header_b .logo img {
+  height: 60px;
+  vertical-align: bottom;
+}
+
+/* ナビゲーション */
+.area_nav_header_b {
+  margin-left: auto;
+}
+
+/* ヘッドナブヘッダー */
+.head_nav_header_b {
+  margin: 0 0 12px;
+}
+
+/* リストナビ_サブ */
+.list_nav_sub_header_b {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.list_nav_sub_header_b > li + li {
+  margin-left : 40px;
+}
+.list_nav_sub_header_b a {
+  font: 300 13px/1em 'noto sans japanese',sans-serif;
+}
+
+/* リストナビ */
+.list_nav_header_b {
+  display: flex;
+  align-items: center;
+  border-right: 1px solid #ccc;
+}
+.list_nav_header_b > li {
+  border-left: 1px solid #ccc;
+}
+.list_nav_header_b a {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  padding: 0 30px;
+}
+.list_nav_header_b a:hover {
+  background: #eee;
+}
+
+
+/* ! ヘッダーC —————————— */
+.header_c {
+  background: #fff;
+}
+.header_c .container {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  max-width: none;
+}
+
+/* ロゴ_c */
+.area_logo_header_c {
+  display: flex;
+  align-items: center;
+}
+.area_logo_header_c .logo {
+  display: block;
+}
+.area_logo_header_c .logo img {
+  height: 25px;
+}
+.area_logo_header_c .copy {
+  font: 300 12px/1em 'noto sans japanese',sans-serif;
+  margin: 0 0 0 30px;
+}
+
+
+/* ナビゲーション_c */
+.area_nav_header_c {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  flex: auto;
+  min-width: 10px;
+}
+
+/* リストナビ_c */
+.list_nav_header_c {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+.list_nav_header_c > li + li {
+  margin-left: 40px;
+}
+
+
+/* アイコンリスト */
+.list_nav_ico_header {
+  display: flex;
+  align-items: center;
+  padding-left: 25px;
+  margin-left: auto;
+  border-left: 1px solid #ccc;
+}
+.list_nav_ico_header > li + li {
+  margin-left: 10px;
+}
+.list_nav_ico_header a {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-size: contain !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+}
+.list_nav_ico_header .search a {
+  background: url(../img/ico/ico_search.svg);
+}
+.list_nav_ico_header .favorite a {
+  background: url(../img/ico/ico_heart.svg);
+}
+.list_nav_ico_header .cart a {
+  background: url(../img/ico/ico_cart.svg);
+}
+
+
+
+
+
