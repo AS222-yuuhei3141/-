@@ -292,5 +292,7 @@ button:hover::before {
 /* ハートのイイねについてのcss */
 
 svg {
-    background-color: coral;
+    /* background-color: coral; */
+    border-radius: 100px;
+    border: 1px solid black;
 }
