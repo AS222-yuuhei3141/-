@@ -147,7 +147,7 @@ a {
 main {
 	width: 100%;
 	max-width: 1000px;
-	margin: 50px auto;
+	margin: 30px auto;
 	padding: 20px;
 }
 
@@ -207,7 +207,6 @@ main {
 
 .contents li.active {
 	display: block;
-	/* background-color: skyblue; */
 }
 
 ul {
@@ -289,3 +288,4 @@ button:hover::before {
     right: 0;
 }
 
+/* ハートボタンについて */
